@@ -2,6 +2,10 @@
 
 [Unsplash Images](https://www.figma.com/file/O2MaAAlr4nznh7m53azatL/Unsplash-images?node-id=0%3A1&t=cYDOCgqOs9IX2If0-1)
 
+## Deplyed URL:
+
+[Netlify Deployed URL](https://cozy-lolly-f47228.netlify.app/)
+
 ## Steps
 
 #### Setup
@@ -27,25 +31,25 @@ Create CSS variables for the background color and text color for both dark mode 
 
 ```css
 :root {
-  /* dark mode setup */
-  --dark-mode-bg-color: #333;
-  --dark-mode-text-color: #f0f0f0;
-  --backgroundColor: var(--grey-50);
-  --textColor: var(--grey-900);
+    /* dark mode setup */
+    --dark-mode-bg-color: #333;
+    --dark-mode-text-color: #f0f0f0;
+    --backgroundColor: var(--grey-50);
+    --textColor: var(--grey-900);
 
-  --darkModeTransition: color 0.3s ease-in-out, background-color 0.3s
-      ease-in-out;
+    --darkModeTransition:
+        color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .dark-theme {
-  --textColor: var(--dark-mode-text-color);
-  --backgroundColor: var(--dark-mode-bg-color);
+    --textColor: var(--dark-mode-text-color);
+    --backgroundColor: var(--dark-mode-bg-color);
 }
 
 body {
-  transition: var(--darkModeTransition);
-  background: var(--backgroundColor);
-  color: var(--textColor);
+    transition: var(--darkModeTransition);
+    background: var(--backgroundColor);
+    color: var(--textColor);
 }
 ```
 
@@ -53,10 +57,10 @@ body {
 
 ```css
 @media (prefers-color-scheme: dark) {
-  :root {
-    --textColor: var(--dark-mode-text-color);
-    --backgroundColor: var(--dark-mode-bg-color);
-  }
+    :root {
+        --textColor: var(--dark-mode-text-color);
+        --backgroundColor: var(--dark-mode-bg-color);
+    }
 }
 ```
 
@@ -129,11 +133,11 @@ Finally, you can add CSS to your application to style the components and provide
 #### Dark Theme Class - Code
 
 ```js
-const body = document.querySelector('body');
-body.classList.toggle('dark-theme', newDarkTheme);
+const body = document.querySelector("body");
+body.classList.toggle("dark-theme", newDarkTheme);
 
 // alternative setup
-document.body.classList.toggle('dark-theme', newDarkTheme);
+document.body.classList.toggle("dark-theme", newDarkTheme);
 ```
 
 const body = document.querySelector('body'); - This line selects the body element of the current document using the document.querySelector() method, which returns the first element that matches the specified selector. In this case, it is selecting the body element.
