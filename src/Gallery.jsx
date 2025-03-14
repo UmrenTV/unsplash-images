@@ -6,7 +6,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 const Gallery = () => {
     const { searchQuery } = useGlobalContext();
-    const url = `https://api.unsplash.com/search/photos?query="${searchQuery}"&client_id=${apiKey}&per_page=25&page=1`;
+    const url = `https://api.unsplash.com/search/photos?query="${searchQuery}"&client_id=${apiKey}&per_page=24&page=1`;
     const { data, isLoading, isError } = useQuery({
         queryFn: async () => {
             return await axios.get(url);
